@@ -226,4 +226,8 @@ this is a POI test
     Information:Total time: 26.646 secs
     Information:178 errors
     Information:0 warnings
+<<<<<<< HEAD
     Information:See complete output in console
+=======
+    Information:See complete output in console
+>>>>>>> 6a4adc8f9b1340fce52ca95b0d342cdf2ebfcd54
