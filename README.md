@@ -1,5 +1,25 @@
 # Towrd
 this is a POI test
+
+解决方案是：在 app/build.gradle 中添加如下配置,放在android｛  里面跟defaultconfig  buildtype等配置是同级
+
+    lintOptions {
+        abortOnError false
+    }
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+    project.tasks.withType(com.android.build.gradle.tasks.Dex) {
+        additionalParameters = ['--core-library']
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
 目前存在的问题是这样的：
 
     ProGuard, version 5.2.1
