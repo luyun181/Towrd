@@ -3,6 +3,9 @@ this is a POI test
 
 解决方案是：在 app/build.gradle 中添加如下配置,放在android｛  里面跟defaultconfig  buildtype等配置是同级
 
+可能出现的问题 core-library这个配置项错误，还是编不过，那就说名你的gradle版本太高了，已经没有这个方法了，需要降级到2.0.8
+
+
     lintOptions {
         abortOnError false
     }
